@@ -14,6 +14,7 @@ class FoodItem extends Model
         'description',
         'price',
         'quantity',
+        'image',
     ];
 
     // Define the many-to-many relationship with categories
