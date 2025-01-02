@@ -20,10 +20,10 @@ class AddColumnsToUsersTable extends Migration
     }
 
     public function down()
-    {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropForeign(['RoleID']);
-            $table->dropColumn(['first_name', 'last_name', 'phone_number', 'address', 'RoleID']);
-        });
-    }
+{
+    Schema::table('users', function (Blueprint $table) {
+        $table->dropForeign(['RoleID']);
+        $table->dropColumn(['phone_number', 'address', 'RoleID']); // Remove first_name and last_name
+    });
+}
 }
